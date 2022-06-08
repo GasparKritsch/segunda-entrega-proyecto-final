@@ -1,0 +1,341 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;;
+}
+
+.titulo h1{
+    padding: 20px;
+    font-size: 2rem;
+    background-color: rgb(68, 67, 67);
+    text-align: center;
+    border-bottom: 3px solid black;
+}
+
+.titulo h1 a{
+    color: white;
+    text-decoration: none;
+    transition: .3s ease-in;
+}
+
+.titulo h1 a:hover{
+    color: black;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+
+.grid{
+    margin: 2rem 2rem;
+    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.navegador, .pie{
+    background-color: black;
+    color: white;
+    grid-column: 1/5;
+    padding: 1.5rem 0;
+}
+
+.navegador ul{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.navegador li{
+    display: inline;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.navegador li a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navegador li a:hover{
+    font-size: 29px;
+    cursor: pointer;
+}
+
+.hero{
+    grid-column: 1/-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.hero_text{
+    width: 50%;
+    background-color:grey;
+    padding: 1.5rem 2rem;
+}
+
+.hero_text h2{
+    font-size: 25px;
+}
+
+.hero_text p{
+    margin-top: 1rem;
+    font-size: 20px;
+    width: 266px;
+}
+
+.gtr img{
+    width: 100%;
+    margin-left: -6rem;
+}
+
+/*footer*/
+
+.pie{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.pie h3{
+    font-size: 25px;
+}
+
+.pie p{
+    margin-top: 1.5rem;
+}
+
+
+/*contactos.html*/
+
+.contactos_sectiongrid{
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+}
+
+.section_contactos h2{
+    margin: 1rem 0;
+    font-size: 25px;
+    text-align: center;
+}
+
+.contactos{
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    list-style-type: none;
+}
+
+.contactos li{
+    list-style-type: none;
+    margin: 2rem 0;
+    font-size: 25px;
+}
+
+.contactos p{
+    font-size: 25px;
+}
+
+.contactos p a{
+    color: grey;
+}
+
+.contactos p a:hover{
+    color: black;
+    font-size: 30px;
+    transition: 0.6s ease;
+    cursor: pointer;
+}
+
+.ubicacion h2 , .formulario h2{
+    margin: 1rem 0;
+    font-size: 25px;
+    text-align: center;
+}
+
+.ubicacion ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.ubicacion li{
+    margin: 2rem 0;
+    font-size: 25px;
+}
+
+.ubicacion li iframe{
+    margin-top: 2rem;
+    width: 80%;
+    height: 80%;
+    justify-content: center;
+}
+
+.ubicacion li iframe:hover{
+    width: 100%;
+    transition: .5s ease;
+}
+
+.formulario{
+    text-align: center;
+    font-size: 25px ;
+}
+
+.enviar{
+    font-size: 20px;
+    padding: 1rem;
+    background-color: grey;
+    color: white;
+    border: 2px solid black;
+}
+
+.enviar:hover{
+    border: 2px solid yellow;
+    color: black;
+    cursor: pointer;
+}
+
+/* media querys*/
+
+
+@media screen and (max-width:425px){
+    
+    .navegador ul{
+        display: flex;
+        flex-wrap: nowrap;
+        list-style-type: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero{
+        margin-left: 3rem;
+    }
+
+    .hero_text{
+        width: 100%;
+    }
+
+    .hero_text h2{
+        font-size: 28px;
+        margin-left: 2rem;
+    }
+
+    .hero_text p{
+        width: auto;
+        font-size: 25px;
+    }
+
+    .section_servicios{
+        grid-column: 1/-1;
+    }
+
+    .imagenes{
+        grid-column: 1/-1;
+    }
+    
+    .imagenes ul{
+        display: flex;
+        list-style-type: none;
+    }
+    
+    .imagenes li{
+        display: flex;
+    }
+
+    .imagenes li img{
+        width: 100%;
+        align-items: center;
+    }
+
+    .productos div{
+        width: 100%;
+        height: 345px ;
+    }
+
+    .presupuestos{
+        grid-column: 1/-1;
+    }
+
+    .wpp_presupuestos{
+        grid-column: 1/-1;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    
+    .section_contactos , .ubicacion , .formulario{
+        grid-column: 1/-1;
+    }
+
+    .ubicacion{
+        margin-top: 1.5rem;
+    }
+
+    .section_contactos div h2{
+        font-size: 20;
+    }
+
+    .gtr img{
+        display: none;
+    }
+    
+    .hero{
+        margin: 1rem 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:1023px){
+    
+    .contactos_sectiongrid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .section_contactos{
+        grid-column: 1/3;
+    }
+
+    .ubicacion{
+        grid-column: 3/5
+    }
+
+    .formulario{
+        grid-column: 1/-1;
+    }
+
+    .gtr img{
+        width:100%;
+        margin-left:-1rem;
+    }
+
+    .productos div{
+        width:200px;
+        height: 240px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .hero_text{
+        width:35%;
+    }
+
+    .gtr img{
+        margin-left:-2rem;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    .productos div{
+        width: 175px;
+        height: 225px;
+    }
+}
+
